@@ -50,3 +50,8 @@ fun main() {
     }
 }
 ```
+
+## ```while``` e ```for```
+Os loops ```while``` e ```do-while``` se comportam exatamente como no Java.
+
+O loop ```for``` é diferente do Java. É mais simples.
