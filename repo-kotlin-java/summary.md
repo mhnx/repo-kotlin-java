@@ -31,3 +31,22 @@ Em Java, uma instrução (em inglês, _statement_) é uma linha ou bloco de cód
 Já uma expressão (em inglês, _expression_), é uma linha ou bloco de código que retorna um valor; logo, **pode** estar no lado direito de um operador de atribuição (```=```).
 
 Por conta dessa característica do Kotlin, o operador ternário não existe em Kotlin. Pois seria redundante.
+
+## ```when```
+A expressão ```when``` substitui a expressão ```switch```, expressão clássica das principais linguagems de programação.
+
+A expressão ```when``` possui duas formas: sem argumento e com argumento.
+
+```kotlin
+fun main() {
+
+    val pizzasOrdered = 2
+
+    when (pizzasOrdered) {
+        0 -> println("Not hungry")
+        1, 2 -> println("Hungry")
+        3 -> println("Very hungry")
+        else -> println("Are you sure?")
+    }
+}
+```
