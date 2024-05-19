@@ -75,3 +75,18 @@ fun myExpressionBodyFunction(n1: Int, n2: Int): Int = n1 + n2
 Outra capacidade que o Kotlin possui é a de declararmos valores padrão para quando a função é chamada e os devidos parâmetros não são passados. Isso simplifica a escrita do código em comparação com outras linguagens. No Java, por exemplo, é necessário usar o conceito de _sobrecarga_.
 
 Além disso é possível passar apenas um único argumento, atribuindo o valor desse argumento em uma variável com o mesmo nome da variável contida na declaração da função. O nome desse conceito é ***named argument***.
+
+## Pacotes
+Em Kotlin, os pacotes são opcionais. Se for declarado, deve estar contido na primeira linha do arquivo de código. Em casos onde a aplicação é muito simples é possível optar por usar apenas um único pacote (_package_, em inglês), deixando todas as classes em um único arquivo. No entanto, se quisermos que nosso código seja interoperável com Java, é necessário ter pacotes declarados em todos os arquivos e os pacotes devem estar corretos (correspondendo a estrutura de arquivos do projeto).
+
+Além disso, é importante saber que o Kotlin importa alguns pacotes nativos automaticamente. São eles:
+- ```kotlin.*``` 
+- ```kotlin.annotation.*```
+- ```kotlin.collections.*```
+- ```kotlin.comparisons.*```
+- ```kotlin.io.*```
+- ```kotlin.jvm.*```
+- ```kotlin.ranges.*```
+- ```kotlin.sequences.*```
+- ```kotlin.text.*```
+- ```java.lang.*```
