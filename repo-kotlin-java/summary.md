@@ -55,3 +55,23 @@ fun main() {
 Os loops ```while``` e ```do-while``` se comportam exatamente como no Java.
 
 O loop ```for``` é diferente do Java. É mais simples.
+
+## ```fun```
+Definir um método ou função em Kotlin é semelhante ao Java. Usamos a palavra reservada ```fun``` e, em seguida, declaramos o nome da função e seus parâmetros entre parênteses.
+```kotlin
+fun myFunction(n1: Int, n2: Int): Int {
+    return n1 + n2
+}
+```
+
+Quando uma função é curta, é possível simplificar sua escrita usando _expression body_:
+```kotlin
+fun myExpressionBodyFunction(n1: Int, n2: Int): Int = n1 + n2
+```
+> Observe que nesse exemplo as chaves (```{``` e ```}```) foram removidas e a palavra reservada ```return``` é substituída pelo sinal de ```=```.
+> 
+> Além disso, é possível simplificar mais removendo a declaração explícita do tipo de dado retornado pela função visto que o Kotlin é capaz de inferior o tipo baseado no tipo dos parâmetros.
+
+Outra capacidade que o Kotlin possui é a de declararmos valores padrão para quando a função é chamada e os devidos parâmetros não são passados. Isso simplifica a escrita do código em comparação com outras linguagens. No Java, por exemplo, é necessário usar o conceito de _sobrecarga_.
+
+Além disso é possível passar apenas um único argumento, atribuindo o valor desse argumento em uma variável com o mesmo nome da variável contida na declaração da função. O nome desse conceito é ***named argument***.
