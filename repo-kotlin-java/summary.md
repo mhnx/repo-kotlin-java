@@ -76,7 +76,7 @@ Outra capacidade que o Kotlin possui é a de declararmos valores padrão para qu
 
 Além disso é possível passar apenas um único argumento, atribuindo o valor desse argumento em uma variável com o mesmo nome da variável contida na declaração da função. O nome desse conceito é ***named argument***.
 
-## Pacotes
+# Pacotes
 Em Kotlin, os pacotes são opcionais. Se for declarado, deve estar contido na primeira linha do arquivo de código. Em casos onde a aplicação é muito simples é possível optar por usar apenas um único pacote (_package_, em inglês), deixando todas as classes em um único arquivo. No entanto, se quisermos que nosso código seja interoperável com Java, é necessário ter pacotes declarados em todos os arquivos e os pacotes devem estar corretos (correspondendo a estrutura de arquivos do projeto).
 
 Além disso, é importante saber que o Kotlin importa alguns pacotes nativos automaticamente. São eles:
@@ -90,3 +90,44 @@ Além disso, é importante saber que o Kotlin importa alguns pacotes nativos aut
 - ```kotlin.sequences.*```
 - ```kotlin.text.*```
 - ```java.lang.*```
+
+# POO
+Nessa seção vamos aprender as diferentes formas de criar classes em Kotlin; como criar o construtor primário e secundário; objetos; _interfaces_, que têm o mesmo objetivo do Java, servir como um contrato, com algumas diferenças; e, _generics_, que é um pouco mais simples que em Java.
+
+## Classes
+Em Kotlin, diferentemente do Java, podemos definir mais de uma classe por arquivo, sem necessidade de ser uma classe aninhada. Por padrão, as classes são públicas. A palavra reservada ```new``` não é necessária. A palavra reservada ```enums``` só tem significado seguido da palavra reservada ```class```. A classe pode ter 1 construtor primário e vários construtores secundários. Para o construtor primário, usamos a palavra reservada ```constructor```, que pode ser omitido se não usamos uma anotação ou um modificador de visibilidade. Além disso, dentro do construtor primário, não podemos ter implementações. Se estivermos usando o construtor primário e queremos que algum código seja executado assim que a classe for instanciada, podemos colocar esse código dentro de um ```init { ... }```.
+
+
+- Exemplo de classe sem a palavra-chave ```constructor```:
+```kotlin
+class Person (firstName: String, lastName: String) {
+
+    init {
+        println("Created a person named $firstName $lastName.")
+    }
+}
+```
+
+- Exemplo de classe com a palavra-chave ```constructor```, pois há um modificador de visibilidade, o ```internal```:
+```kotlin
+class Person internal constructor(firstName: String, lastName: String) {
+
+    init {
+        println("Created a person named $firstName $lastName.")
+    }
+}
+```
+
+Em alguns cenários, podemos precisar de um construtor secundário, para poder criar instâncias com diferentes números de parâmetros. Nesse caso o construtor secundário precisa chamar o construtor primário por meio da palavra-chave ```this```:
+
+```kotlin
+class Person internal constructor(firstName: String, lastName: String) {
+
+    init {
+        println("Created a person named $firstName $lastName.")
+    }
+
+    constructor(firstName: String, lastName: String, middleName: String):
+            this(firstName, lastName)
+}
+```
