@@ -131,3 +131,18 @@ class Person internal constructor(firstName: String, lastName: String) {
             this(firstName, lastName)
 }
 ```
+
+## Objetos
+Assim como em JavaScript, para criar um objeto não é necessário criar uma classe. Os objetos são entidades. Para declarar um objeto fazemos uso da palavra-chave ```object```:
+```kotlin
+fun main() {
+    val location = object {
+        var xCoordinate = 200
+        var yCoordinate = 300
+    }
+}
+```
+
+Os objetos também podem ter funções.
+
+Além do uso do tipo ```object``` (_object type_, que é uma expressão), há também a _object declaration_, que é uma instrução. Este não pode ser declarado localmente dentro de uma função, mas pode ser aninhado em outro objeto para criar uma declaração de objeto.
