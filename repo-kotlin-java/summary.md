@@ -206,3 +206,9 @@ fun <T : Comparable<T>> max(param1: T, param2: T) : T {
 ```
 
 Como isso a função vai funcionar como esperado.
+
+# Interoperabilidade com Java
+
+É possível ter classes escritas em Java em um projeto com Kotlin e trabalhar com seus valores de forma simples.
+
+Uma classe com atributo definido como ```private final``` vai ser traduzida como um ```val```. E sem o ```final``` será traduzida como um ```var```.
