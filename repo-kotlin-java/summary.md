@@ -155,3 +155,54 @@ As _intefaces_ em Kotlin são semelhantes às do Java. Ambas contêm declaraçõ
 No Kotlin há um comportamento diferente em relação às intefaces. Elas podem ter métodos que serão herdados ao invés de implementados na classe de implementação. Ou seja, qualquer função que tenha corpo será herdada pela classe que implementa a interface.
 
 Para implementar uma interface basta usar o operador ```:```.
+
+## Generics
+Generics é uma abordagem que permite criar uma classe ou método de forma que possa ser utilizada com diferentes tipos de dados, mas que são similares entre si.
+
+Os _generics_ em Kotlin são semelhantes a definição em Java. Mas são mais fáceis de trabalhar.
+
+Vamos imaginar que precisamos criar uma função chamada Max e que essa função pega dois parâmetros do mesmo tipo e retorna o maior valor entre os dois. Gostaríamos que essa função funcionasse com todos os tipos de dados, String, Byte, Long, etc.
+
+Para criar uma função genérica observe a abordagem a seguir:
+
+1. Vamos declarar uma função chamada de ```max```:
+```kotlin
+fun max() {    
+}
+```
+
+2. Agora vamos declarar os seus parâmetros. No nosso caso, queremos que essa função retorne qual é o maior valor entre dois parâmetros de mesmo tipo. Logo, vamos adicionar os parâmetros com um tipo genérico:
+```kotlin
+fun max(param1: T, param2: T) : T {    
+}
+```
+
+Observe que o ```T``` é apenas uma letra para definir que é um tipo genérico. Poderia ser qualquer letra. Por padrão usamos a letra T.
+
+Observe que a função recebe dois parâmetros do tipo T e que a função retorna um valor com o mesmo tipo, no caso, tipo T.
+
+3. Além disso, precisamos avisar à função que ela é genérica. Então adicionamos ```<T>``` após a palavra-chave ```fun```:
+```kotlin
+fun <T> max(param1: T, param2: T) : T {    
+}
+```
+
+O ```<T>``` é o parâmetro de tipo que a função vai receber. É um espaço reservado que será substituído em tempo de compilação por um tipo específico.
+
+Até agora declaramos o seguinte: uma função que recebe dois parâmetros também do tipo T e que retorna um tipo T.
+
+Para o nosso exemplo de _generics_, há uma função chamada ```compareTo()``` que retorna 1 quando o primeiro argumento é maior que o segundo. E 0 quando o oposto acontece. Assim, poderíamos declarar o corpo da função assim:
+```kotlin
+    val result = param1.compareTo(param2)
+    return if (result > 0) param1 else param2
+```
+
+Porém nem todos os tipos de dados têm a função ```compareTo()```. O tipo String, por exemplo, é um dos tipos que não possuem essa função. Assim, precisamos declarar que o parâmetro de tipo da nossa função implementa a interface ```Comparable```, a fim de que os parâmetros tenham a função ```compareTo()```:
+
+```kotlin
+fun <T : Comparable<T>> max(param1: T, param2: T) : T {
+    (...)
+}
+```
+
+Como isso a função vai funcionar como esperado.
