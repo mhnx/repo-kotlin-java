@@ -146,3 +146,12 @@ fun main() {
 Os objetos também podem ter funções.
 
 Além do uso do tipo ```object``` (_object type_, que é uma expressão), há também a _object declaration_, que é uma instrução. Este não pode ser declarado localmente dentro de uma função, mas pode ser aninhado em outro objeto para criar uma declaração de objeto.
+
+## Interfaces
+As _intefaces_ em Kotlin são semelhantes às do Java. Ambas contêm declarações de implementação de métodos, que também são semelhantes às classes abstratas. Mas, diferente das classes abstratas, as _interfaces_ não podem armazenar o estado. Seu objetivo é afirmar qual método deve ser definido por qual usuário da _inteface_ e preferem colocar a sua _interface_ em seu próprio arquivo.
+
+> Lembre-se: qualquer classe que implementar a interface tem que implementar tudo que for definido na interface.
+
+No Kotlin há um comportamento diferente em relação às intefaces. Elas podem ter métodos que serão herdados ao invés de implementados na classe de implementação. Ou seja, qualquer função que tenha corpo será herdada pela classe que implementa a interface.
+
+Para implementar uma interface basta usar o operador ```:```.
