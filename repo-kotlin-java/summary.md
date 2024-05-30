@@ -261,3 +261,6 @@ Os outros operadores _overloadable_ são:
 | ```x *= y``` |     timesAssign    |
 | ```x /= y``` |     divAssign      |
 | ```x %= y``` |     modAssign      |
+
+## _Annotations_
+As _annotations_ são metadados junto ao código. A maneira como usamos _annotations_ em Kotlin é semelhante a Java.
