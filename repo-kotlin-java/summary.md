@@ -216,3 +216,48 @@ Uma classe com atributo definido como ```private final``` vai ser traduzida como
 Também é possível utilizar classes escritas em Kotlin em clases Java. As propriedades do Kotlin são acessadas pelo Java via getters e setters, que são gerados _automagicamente_ pelo compilador Kotlin. Quando estamos no lado Kotlin, não conseguimos acessar os getters e setters, acessamos as propriedades diretamente. Mas quando a classe é usada no Java é possível fazer isso.
 
 Para chamar funções, o compilador vai gerar um método estático daquela função em Kotlin e vai adicionar o sufixo Kt ao final do nome da função.
+
+# Recursos avançados do Kotlin
+## Sobrecarga de operadores
+Na programação, os operadores são funções que usam nomes simbólicos.
+
+Os operadores binários _overloadable_ são:
+
+| **Operador** | **Nome da função** |
+|:------------:|:------------------:|
+|  ```x + y``` |        plus        |
+|  ```x - y``` |        minus       |
+|  ```x * y``` |        times       |
+|  ```x / y``` |         div        |
+|  ```x % y``` |         mod        |
+| ```x .. y``` |       rangeTo      |
+
+Os símbolos de somar e subtrair, por exemplo, chamam as funções ```plus``` e ```minus```, respectivamente.
+
+Nós podemos criar nossas próprias funções para símbolos em nossas classes. Esse é o conceito de **sobrecarga de operadores**.
+
+Os operadores do Kotlin podem ser divididos em 3 grupos:
+- operadores binários, um operador no meio de dois operandos (```x + y```, por exemplo). O operador é mapeado internamente para o nome de uma função.
+- operadores unários, um operador e um único operando (```!x```, por exemplo).
+- demais operadores, atualmente existem mais de 30 operadores que podemos sobrecarregar.
+
+
+Os operadores unários _overloadable_ são:
+
+| **Operador** | **Nome da função** |
+|:------------:|:------------------:|
+|```++x, y++```|        inc         |
+|```--x, y--```|        dec         |
+|   ```+x```   |      unaryPlus     |
+|   ```-x```   |      unaryMinus    |
+|   ```!x```   |        not         |
+
+Os outros operadores _overloadable_ são:
+
+| **Operador** | **Nome da função** |
+|:------------:|:------------------:|
+| ```x += y``` |     plusAssign     |
+| ```x -= y``` |     minusAssign    |
+| ```x *= y``` |     timesAssign    |
+| ```x /= y``` |     divAssign      |
+| ```x %= y``` |     modAssign      |
