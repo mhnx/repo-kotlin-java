@@ -282,3 +282,8 @@ dependencies {
 Esse recurso é avançado. Seu uso é considerado quando precisar especializar alguma coisa, acessar dinamicamente algum valor de um objeto, manipular um objeto, etc.
 
 > **Lembre-se:** Usar o reflection tem um custo. Seu projeto vai empacotar o JAR do Kotlin Reflection e vai deixar o projeto maior por conta da biblioteca extra, e assim como no Java, usar reflection é lento. Use apenas depois que dominar a linguagem, já que é um recurso avançado.
+
+## Desestruturação (_Destructuring_)
+A desestruturação é uma maneira de extrairmos apenas as variáveis que queremos de um objeto complexo.
+
+Ao declararmos _data classes_, o Kotlin já inclui mecanismos de desestruturação durante a compilação.
