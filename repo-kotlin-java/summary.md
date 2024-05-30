@@ -212,3 +212,7 @@ Como isso a função vai funcionar como esperado.
 É possível ter classes escritas em Java em um projeto com Kotlin e trabalhar com seus valores de forma simples.
 
 Uma classe com atributo definido como ```private final``` vai ser traduzida como um ```val```. E sem o ```final``` será traduzida como um ```var```.
+
+Também é possível utilizar classes escritas em Kotlin em clases Java. As propriedades do Kotlin são acessadas pelo Java via getters e setters, que são gerados _automagicamente_ pelo compilador Kotlin. Quando estamos no lado Kotlin, não conseguimos acessar os getters e setters, acessamos as propriedades diretamente. Mas quando a classe é usada no Java é possível fazer isso.
+
+Para chamar funções, o compilador vai gerar um método estático daquela função em Kotlin e vai adicionar o sufixo Kt ao final do nome da função.
