@@ -264,3 +264,21 @@ Os outros operadores _overloadable_ são:
 
 ## _Annotations_
 As _annotations_ são metadados junto ao código. A maneira como usamos _annotations_ em Kotlin é semelhante a Java.
+
+## _Reflections_
+As _reflections_ nos permitem acessar informações programáticas dos nossos objetos dinamicamente em runtime. Na verdade, a maioria dos frameworks que usamos no dia a dia costumam usar muito esse recurso.
+
+Pra amenizar o runtime do Kotlin, as APIs de reflexão são mantidas em um arquivo JAR separado. Por isso, para usá-las, precisamos adicionar uma nova dependência ao nosso projeto.
+
+Adicione a dependência no arquivo ```build.gradle.kts```:
+
+```kotlin
+dependencies {
+    runtimeOnly("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
+    (...)
+}
+```
+
+Esse recurso é avançado. Seu uso é considerado quando precisar especializar alguma coisa, acessar dinamicamente algum valor de um objeto, manipular um objeto, etc.
+
+> **Lembre-se:** Usar o reflection tem um custo. Seu projeto vai empacotar o JAR do Kotlin Reflection e vai deixar o projeto maior por conta da biblioteca extra, e assim como no Java, usar reflection é lento. Use apenas depois que dominar a linguagem, já que é um recurso avançado.
