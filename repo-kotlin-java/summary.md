@@ -306,3 +306,6 @@ Contras:
 
 ## Lambdas
 Também conhecidas como **funções anônimas**, são funções sem nome definidas dentro de chaves (```{}```) e seus argumentos não estão entre parênteses e a seta (```->```) separa os argumentos do código.
+
+## Closures
+Closure é quando as variáveis locais de uma função são mantidas vivas após o término da execução da função.
