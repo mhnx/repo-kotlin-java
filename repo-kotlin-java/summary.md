@@ -287,3 +287,19 @@ Esse recurso é avançado. Seu uso é considerado quando precisar especializar a
 A desestruturação é uma maneira de extrairmos apenas as variáveis que queremos de um objeto complexo.
 
 Ao declararmos _data classes_, o Kotlin já inclui mecanismos de desestruturação durante a compilação.
+
+# Programação funcional
+## Teoria
+A programação funcional foi criada na década de 1950. Mas ainda é nova para muitos desenvolvedores.
+
+Prós:
+- Não armazenam estado e os dados são imutáveis, fazendo com que os programas tenham menos bugs
+
+- Fácil reutilização de código
+
+- Multithread seguro
+
+Contras:
+- Não há loops, dependendo muito da recursão, o que faz o código ser menos eficiente
+
+- Para programadores acostumados com POO, pode ser dificil resolver problemas utulizando a programação funcional
