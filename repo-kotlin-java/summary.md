@@ -303,3 +303,6 @@ Contras:
 - Não há loops, dependendo muito da recursão, o que faz o código ser menos eficiente
 
 - Para programadores acostumados com POO, pode ser dificil resolver problemas utulizando a programação funcional
+
+## Lambdas
+Também conhecidas como **funções anônimas**, são funções sem nome definidas dentro de chaves (```{}```) e seus argumentos não estão entre parênteses e a seta (```->```) separa os argumentos do código.
