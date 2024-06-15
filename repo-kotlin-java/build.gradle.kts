@@ -7,10 +7,12 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven(url = "https://jcenter.bintray.com")
 }
 
 dependencies {
     runtimeOnly("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
+    implementation("org.funktionale:funktionale-all:1.2")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation(kotlin("test"))

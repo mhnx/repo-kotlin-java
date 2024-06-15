@@ -312,3 +312,8 @@ Closure é quando as variáveis locais de uma função são mantidas vivas após
 
 ## Sequences/Streams
 ```Sequences``` é o equivalente no Kotlin ao ```Streams``` do Java. Uma ```Sequence``` é uma _lazy evaluated collection_ (coleção verificada tardiamente). Eles são praticamente idênticos aos ```Streams``` do Java 8. A grande diferença é que a ```Sequence``` não pode rodar em várias CPUs. Elas não são coleções. Elas não são geradas até que uma operação seja finalizada (uma soma ou uma chamada do método ```toList()```). Uma coleção, por outro lado, sempre existe.
+
+## A biblioteca funKTionale
+Essa biblioteca ajuda a completar o padrão funcional no Kotlin.
+
+[Biblioteca funKTionale](https://github.com/MarioAriasC/funKTionale)
