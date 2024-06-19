@@ -317,3 +317,10 @@ Closure é quando as variáveis locais de uma função são mantidas vivas após
 Essa biblioteca ajuda a completar o padrão funcional no Kotlin.
 
 [Biblioteca funKTionale](https://github.com/MarioAriasC/funKTionale)
+
+## Composição
+É uma técnica de programação funcional que cria uma nova função combinando outras duas funções existentes.
+
+Usamos o método ```compose``` da biblioteca _funKTionale_. Nessa abordagem, os métodos são chamados da direita para a esquerda.
+
+Usamos o método ```compose``` da biblioteca _funKTionale_. Nessa abordagem, os métodos são chamados da esquerda para a direita.
